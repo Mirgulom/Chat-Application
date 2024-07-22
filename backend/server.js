@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
+import cookieParser from 'cookie-parser'
 
 dotenv.config()
 
@@ -17,12 +18,16 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
+app.use(express.json())
+
+app.use(cookieParser())
+
 app.get("/", (req,res) => {
     res.send("Hello world")
 })
 
 // import routes
-import authRoutes from "./routes/auth.routes"
+import authRoutes from "./routes/auth.routes.js"
 
 app.use("/api/auth", authRoutes)
 
