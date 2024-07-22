@@ -21,6 +21,11 @@ app.get("/", (req,res) => {
     res.send("Hello world")
 })
 
+// import routes
+import authRoutes from "./routes/auth.routes"
+
+app.use("/api/auth", authRoutes)
+
 app.listen(PORT, () => {
     console.log("Server is running on port" + " " + PORT)
 })
