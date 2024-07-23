@@ -15,7 +15,7 @@ export const signup = async(req, res, next) => {
     }
 
     if(password !== confirmPassword){
-        return next(errorHandler(400, "PAsswords don't match"))
+        return next(errorHandler(400, "Passwords don't match"))
     }
 
     const hashedPassword = bcryptjs.hashSync(password, 10)
