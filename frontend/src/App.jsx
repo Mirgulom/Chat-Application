@@ -1,4 +1,7 @@
-
+import {Routes, Route} from "react-router-dom"
+import Home from './pages/Home'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 
 
 function App() {
@@ -6,10 +9,12 @@ function App() {
 
   return (
   
-    <div className="">
-        <button class="btn btn-primary">One</button>
-        <button class="btn btn-secondary">Two</button>
-        <button class="btn btn-accent btn-outline">Three</button>
+    <div className="p-4 h-screen flex flex-col items-center justify-center">
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+      </Routes>
     </div>
     
   )
