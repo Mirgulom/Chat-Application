@@ -9,7 +9,7 @@ const Login = () => {
                     <span className="text-blue-700 "> Chat Application</span>
                 </h1>
 
-                <form action="">
+                <form action="" className="">
                     <div>
                         <label htmlFor="" className="label p-2">
                             <span className="text-base label-text">E-mail</span>
